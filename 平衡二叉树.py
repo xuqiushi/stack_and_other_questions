@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-from 打家劫舍3 import TreeNode, Tree
+from achievement import TreeNode, Tree
 
 
 class Solution:
