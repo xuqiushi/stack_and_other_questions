@@ -22,6 +22,16 @@ class ListNode:
             current_node = next_node
         return root_node
 
+    def display(self, root=None):
+        if not root:
+            return f"{self.val}=>{self.next.display(root=self)}"
+        else:
+            if self != root:
+                if not self.next:
+                    return f"{self.val}"
+                else:
+                    return f"{self.val}=>{self.next.display(root=root)}"
+
 
 class TreeNode:
     """
