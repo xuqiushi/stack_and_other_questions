@@ -86,4 +86,3 @@ class Solution:
 if __name__ == "__main__":
     test_rooms = [[1, 3], [2], [0], []]
     print(Graph(test_rooms).tarjan(0))
-    pass
