@@ -35,7 +35,9 @@ class Solution:
                         f"{roman}{self.roman_int_mapping[map_index - 2][0]}"
                     )
                 else:
-                    current_string = f"{roman}{self.roman_int_mapping[map_index - 1][0]}"
+                    current_string = (
+                        f"{roman}{self.roman_int_mapping[map_index - 1][0]}"
+                    )
             else:
                 current_string = roman * current_count
             result.append(current_string)

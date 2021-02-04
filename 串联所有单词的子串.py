@@ -94,5 +94,5 @@ class Solution:
 if __name__ == "__main__":
     test_string = "aabbaabbaabb"
 
-    test_words = ["bb","aa","bb","aa","bb"]
+    test_words = ["bb", "aa", "bb", "aa", "bb"]
     print(Solution().find_substring(test_string, test_words))

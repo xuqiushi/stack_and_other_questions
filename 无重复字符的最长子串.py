@@ -54,7 +54,7 @@ class Solution:
                 old_same_char_position = current_sub_word[char]
                 new_start = old_same_char_position + 1
                 current_sub_word = OrderedDict(
-                    list(current_sub_word.items())[new_start - current_start:]
+                    list(current_sub_word.items())[new_start - current_start :]
                 )
                 current_start = new_start
                 current_sub_word[char] = current_sub_word_char_index

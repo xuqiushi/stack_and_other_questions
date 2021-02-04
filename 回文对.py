@@ -47,14 +47,12 @@ class Solution:
                 for value in palindrome_word.values():
                     result += [[value, word_index], [word_index, value]]
                 continue
-            result += cls._get_palindrome_part(
-                word, word_index, restore_dict
-            )
+            result += cls._get_palindrome_part(word, word_index, restore_dict)
         return result
 
 
 if __name__ == "__main__":
-    test_list = ["a",""]
+    test_list = ["a", ""]
     print(Solution().palindrome_pairs(test_list))
     # start = datetime.now()
     # lp = LineProfiler()

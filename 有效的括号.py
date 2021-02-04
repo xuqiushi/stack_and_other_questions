@@ -3,16 +3,8 @@ from collections import deque
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        right_reverse = {
-            ")": "(",
-            "]": "[",
-            "}": "{"
-        }
-        left_reverse = {
-            "(": ")",
-            "[": "]",
-            "{": "}"
-        }
+        right_reverse = {")": "(", "]": "[", "}": "{"}
+        left_reverse = {"(": ")", "[": "]", "{": "}"}
         left = deque()
         for char in s:
             if char in left_reverse:

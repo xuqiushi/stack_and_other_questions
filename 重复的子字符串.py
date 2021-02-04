@@ -23,7 +23,7 @@ class Solution:
         if len(s) == 0:
             return False
 
-        new_string = (s + s)[1: -1]
+        new_string = (s + s)[1:-1]
         return new_string.find(s) != -1
 
 

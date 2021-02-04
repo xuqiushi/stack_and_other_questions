@@ -18,7 +18,9 @@ class Solution:
             if p.val != q.val:
                 return False
             else:
-                return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+                return self.isSameTree(p.left, q.left) and self.isSameTree(
+                    p.right, q.right
+                )
 
 
 if __name__ == "__main__":

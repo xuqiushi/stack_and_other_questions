@@ -35,7 +35,11 @@ class Solution:
             (np.ones(lines.shape[0]), (lines[:, 0], lines[:, 1])),
             shape=(len(values), len(values)),
         ).toarray()
-        relate_matrix = np.ones((len(values), len(values))) - half_relate_matrix - half_relate_matrix.T
+        relate_matrix = (
+            np.ones((len(values), len(values)))
+            - half_relate_matrix
+            - half_relate_matrix.T
+        )
         all_combinations = [
             item
             for r in range(len(values), len(values))
@@ -53,7 +57,8 @@ class Solution:
 class SolutionTwo:
     def rob(self, root: TreeNode) -> int:
         def _rob(root):
-            if not root: return 0, 0
+            if not root:
+                return 0, 0
 
             ls, ln = _rob(root.left)
             rs, rn = _rob(root.right)

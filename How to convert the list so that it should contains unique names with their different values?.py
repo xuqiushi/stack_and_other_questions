@@ -1,5 +1,6 @@
 if __name__ == "__main__":
     import pandas as pd
+
     votes = [
         ["Y AFGHANISTAN", "Y INDIA", "Y NEPAL", "N UNITED STATES"],
         ["Y AFGHANISTAN", "N INDIA", "Y NEPAL", "      MALI", "Y UNITED STATES"],

@@ -21,8 +21,10 @@ if __name__ == "__main__":
     # 绘制此交点轨迹
     plot_parametric(*[(point[0], point[1], (b, 0, sqrt(6))) for point in Intersections])
     # 另一线段长度，因为平方，所以其实四个函数可以看做一个
-    line_length = sqrt(x**2 + y**2)
-    line_length_list = [line_length.subs({x: point[0], y: point[1]}) for point in Intersections]
+    line_length = sqrt(x ** 2 + y ** 2)
+    line_length_list = [
+        line_length.subs({x: point[0], y: point[1]}) for point in Intersections
+    ]
     line_length = line_length_list[0]
     pprint(f"{'线段长度为:':=^20}")
     pprint(line_length)

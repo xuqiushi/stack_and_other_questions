@@ -51,7 +51,10 @@ class Solution:
                         left_index = middle_right
                     else:
                         right_index = middle_left
-                elif nums[left_index] < nums[middle_left] and nums[right_index] > nums[middle_right]:
+                elif (
+                    nums[left_index] < nums[middle_left]
+                    and nums[right_index] > nums[middle_right]
+                ):
                     if target > nums[middle_right]:
                         left_index = middle_right
                     else:

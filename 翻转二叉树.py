@@ -10,7 +10,10 @@ class Solution:
         cache.append(root)
         while cache:
             current_node = cache.pop()
-            current_node.left, current_node.right = current_node.right, current_node.left
+            current_node.left, current_node.right = (
+                current_node.right,
+                current_node.left,
+            )
             if current_node.left:
                 cache.append(current_node.left)
             if current_node.right:

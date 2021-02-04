@@ -10,7 +10,7 @@ class Solution:
             prefix = ""
             remaining = string_int
         result = int(f"{prefix}{remaining[::-1]}")
-        return result if -2**31 < result < 2**31-1 else 0
+        return result if -(2 ** 31) < result < 2 ** 31 - 1 else 0
 
 
 if __name__ == "__main__":

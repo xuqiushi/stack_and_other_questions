@@ -54,7 +54,10 @@ class Solution:
                     new_string,
                     symmetry_point_position - current_max_left,
                 )
-            if max_half_length[current_position] + current_position > current_max_center + current_max_half_length:
+            if (
+                max_half_length[current_position] + current_position
+                > current_max_center + current_max_half_length
+            ):
                 current_max_center = current_position
                 current_max_half_length = max_half_length[current_position]
             current_position += 1

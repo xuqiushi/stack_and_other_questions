@@ -3,3 +3,4 @@ __pycache__/
 *.db
 *.txt
 *.xlsx
+.DS_Store

@@ -5,6 +5,7 @@ class Solution:
     """
     没啥意义的题目，又是分治应该是翻倍的乘就可以了。懒得做。
     """
+
     def my_pow(self, x: float, n: int) -> float:
         return math.pow(x, n)
 

@@ -35,7 +35,11 @@ class Solution:
                 continue
             elif not current_compared_pair[0] and not current_compared_pair[1]:
                 return True
-            last_char = current_compared_pair[0][-1] if len(current_compared_pair[0]) > 0 else ""
+            last_char = (
+                current_compared_pair[0][-1]
+                if len(current_compared_pair[0]) > 0
+                else ""
+            )
             last_pattern = current_compared_pair[1][-1]
             if "*" not in last_pattern:
                 if not self.match_char(last_char, last_pattern):

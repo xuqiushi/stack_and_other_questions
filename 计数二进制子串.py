@@ -2,7 +2,6 @@ from collections import OrderedDict
 
 
 class Solution:
-
     def get_char_counts(self, word):
         char_count = []
         last_char = word[0]

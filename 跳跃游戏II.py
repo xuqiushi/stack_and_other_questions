@@ -31,8 +31,13 @@ class Solution:
             standby_set.remove(next_point)
             del standby_distance_dict[next_point]
             for standby_index, standby_point in enumerate(standby_set):
-                if (next_point, standby_point) in graph and standby_point not in standby_distance_dict:
-                    standby_distance_dict[standby_point] = existed_distance[next_point] + 1
+                if (
+                    next_point,
+                    standby_point,
+                ) in graph and standby_point not in standby_distance_dict:
+                    standby_distance_dict[standby_point] = (
+                        existed_distance[next_point] + 1
+                    )
         return existed_distance
 
     def jump(self, nums: List[int]) -> int:
@@ -44,5 +49,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    test_nums = [2,3,1,1,4]
+    test_nums = [2, 3, 1, 1, 4]
     print(Solution().jump(test_nums))

@@ -18,5 +18,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    test_nums = [1,1,2]
+    test_nums = [1, 1, 2]
     print(Solution().remove_duplicates(test_nums))

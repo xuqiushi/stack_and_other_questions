@@ -31,7 +31,11 @@ class Solution:
                 if candidate + current_sum < target:
                     cache.append((candidate, current_number_level, real_index))
                 elif candidate + current_sum == target:
-                    result.add(tuple(sorted([num[0] for num in current_select_que] + [candidate])))
+                    result.add(
+                        tuple(
+                            sorted([num[0] for num in current_select_que] + [candidate])
+                        )
+                    )
                 else:
                     continue
         return [list(item) for item in result]

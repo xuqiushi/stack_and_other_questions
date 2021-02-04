@@ -22,5 +22,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    test_height = [2,3,4,5,18,17,6]
+    test_height = [2, 3, 4, 5, 18, 17, 6]
     print(Solution().max_area(test_height))

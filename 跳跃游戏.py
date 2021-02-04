@@ -26,7 +26,10 @@ class Solution:
             for i in range(1, num + 1):
                 if current_position + i >= len(nums) - 1:
                     return True
-                if next_step + nums[current_position + next_step] < i + nums[current_position + i]:
+                if (
+                    next_step + nums[current_position + next_step]
+                    < i + nums[current_position + i]
+                ):
                     next_step = i
             if next_step > 0:
                 current_position = current_position + next_step
@@ -43,5 +46,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    test_nums = [2,5,0,0]
+    test_nums = [2, 5, 0, 0]
     print(Solution().can_jump(test_nums))

@@ -23,5 +23,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    test_nums = [1,2,3]
+    test_nums = [1, 2, 3]
     print(Solution().permute(test_nums))
