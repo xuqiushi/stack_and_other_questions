@@ -4,3 +4,4 @@ __pycache__/
 *.txt
 *.xlsx
 .DS_Store
+tmp
