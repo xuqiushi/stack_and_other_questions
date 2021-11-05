@@ -39,12 +39,12 @@ if __name__ == "__main__":
         x_size = x.shape[0]
         x = x.reshape(1, -1)
         reshaped_x = x.reshape(-1, 1)
-        result = np.sqrt(
-            m ** 2
-            + ((reshaped_x - x) / m) ** 2
-            + 2 * reshaped_x ** 2
-            + 2 * x ** 2
-        ) / 2
+        result = (
+            np.sqrt(
+                m ** 2 + ((reshaped_x - x) / m) ** 2 + 2 * reshaped_x ** 2 + 2 * x ** 2
+            )
+            / 2
+        )
         return result
 
     print(test2(test_m, test_x))
