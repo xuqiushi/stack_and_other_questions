@@ -1,5 +1,5 @@
 from collections import deque
-from achievement import ListNode
+from leetcode_python.achievement import ListNode
 
 
 class Solution:

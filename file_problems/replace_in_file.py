@@ -30,4 +30,4 @@ class LineReplacer(object):
 
 if __name__ == "__main__":
     replacer = LineReplacer("boss", 60)
-    replacer.replace_file("test.txt", "output.txt")
+    replacer.replace_file("data/replace_in_file.txt", "output.txt")
