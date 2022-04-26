@@ -16,18 +16,13 @@ if __name__ == "__main__":
     Google_IDS = [
         "https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder#maps_places_placeid_finder-css"
     ]
-
+    wait = WebDriverWait(driver, 10)
     for Google_ID in Google_IDS:
         driver.get(Google_ID)
-        wait = WebDriverWait(driver, 10)
-        Google_IDS = [
-            'https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder#maps_places_placeid_finder-css']
-
-        for Google_ID in Google_IDS:
-            driver.get(Google_ID)
-            wait.until(EC.frame_to_be_available_and_switch_to_it(
-                (By.CSS_SELECTOR, "div.devsite-article-body.clearfix > div > devsite-iframe > iframe")))
-            Google_ID = driver.find_element(By.CSS_SELECTOR, '#pac-input')
-            Google_ID.send_keys('Statue of Liberty National Monument')
-            Google_ID.send_keys(Keys.DOWN)
-            Google_ID.send_keys(Keys.ENTER)
+        wait.until(EC.frame_to_be_available_and_switch_to_it(
+            (By.XPATH, '//*[@id="gc-wrapper"]/main/devsite-content/article/div[2]/div/devsite-iframe/iframe')))
+        Google_ID = driver.find_element(By.CSS_SELECTOR, '#pac-input')
+        Google_ID.send_keys('Statue of Liberty National Monument')
+        wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]")))
+        Google_ID.send_keys(Keys.DOWN)
+        Google_ID.send_keys(Keys.ENTER)
